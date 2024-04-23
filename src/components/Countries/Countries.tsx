@@ -11,12 +11,16 @@ import Card from "../Shared/Card";
 import useCountries from "LogicServices/Countries/useCountries";
 
 const Countries = () => {
-  const iterator = new Array(12).fill(null);
-  const { state } = useCountries();
+  const { state, actions } = useCountries();
+
   return (
     <Container>
       <SearcherContainer>
-        <Searcher label="Search..." value="" onChange={(value) => {}} />
+        <Searcher
+          label="Search..."
+          value={state.search}
+          onChange={actions.onChangeSearch}
+        />
       </SearcherContainer>
       <CardContainer>
         {state.countries.map((country) => (
