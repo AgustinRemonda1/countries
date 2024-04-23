@@ -1,5 +1,5 @@
-import Example from "components/example";
+import Countries from "components/Countries";
 
 export default function Home() {
-  return <Example />;
+  return <Countries />;
 }

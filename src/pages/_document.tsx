@@ -45,6 +45,14 @@ class MyDocument extends Document<any> {
           {
             <style>
               {"html,body { padding: 0; margin: 0; width: 100%; height: 100%;}"}
+              <link
+                href="https://fonts.googleapis.com/css?family=Open Sans"
+                rel="stylesheet"
+              ></link>
+              <link
+                href="https://fonts.googleapis.com/css?family=Inter"
+                rel="stylesheet"
+              ></link>
             </style>
           }
           {this.props.styleTags /* rendering the actual stylesheet */}
