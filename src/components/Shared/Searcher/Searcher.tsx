@@ -19,6 +19,8 @@ const Searcher: FC<IProps> = ({ label, value, onChange, debounce = 300 }) => {
     <FormControl fullWidth sx={{ m: 1 }}>
       <Box width={576}>
         <SearchInput
+          value={draft}
+          onChange={onTyping}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">

@@ -28,7 +28,11 @@ const Countries = () => {
         ))}
       </CardContainer>
       <PaginationContainer>
-        <Pagination />
+        <Pagination
+          page={state.page}
+          total={state.total}
+          onChangePage={actions.onChangePage}
+        />
       </PaginationContainer>
     </Container>
   );

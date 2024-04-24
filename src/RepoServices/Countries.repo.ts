@@ -8,6 +8,7 @@ const countryQuery = `query Query {
     }
     name
     phone
+    capital
     states {
       name
     }
@@ -15,7 +16,7 @@ const countryQuery = `query Query {
   }
 }`;
 
-export const fetchCountries = async (country: string) => {
+export const fetchCountries = async () => {
   try {
     const result = await Request.post(
       "https://countries.trevorblades.com/graphql",
@@ -24,7 +25,7 @@ export const fetchCountries = async (country: string) => {
         query: countryQuery,
       }
     );
-
+    console.log(result.data);
     return result.data.data.countries;
   } catch {}
 };

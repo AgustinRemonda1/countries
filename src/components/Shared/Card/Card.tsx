@@ -28,7 +28,7 @@ const Card: FC<IProp> = ({ country }) => {
           <CountryInformationContent>
             <CountryName>{country.name}</CountryName>
             <CountryInformation>
-              <span>{country.states[0]?.name}</span>
+              <span>{country.capital}</span>
               <span>{country.states.length} states</span>
               <span>+{country.phone}</span>
             </CountryInformation>
