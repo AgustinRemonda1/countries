@@ -13,6 +13,9 @@ export const Container = styled(Card)`
   color: #fff;
   border-radius: 20px;
   border: 2px solid #505568;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export const CountryInformationContainer = styled.div`

@@ -22,6 +22,9 @@ export const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const SearcherContainer = styled.div`

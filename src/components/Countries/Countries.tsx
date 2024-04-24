@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import {
   CardContainer,
   Container,
@@ -12,6 +12,20 @@ import useCountries from "LogicServices/Countries/useCountries";
 
 const Countries = () => {
   const { state, actions } = useCountries();
+
+  useLayoutEffect(() => {
+    const handleResize = () => {
+      window.innerWidth < 768
+        ? actions.onChangePageSize(3)
+        : actions.onChangePageSize(12);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [actions.onChangePageSize]);
 
   return (
     <Container>
